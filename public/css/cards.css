@@ -1,0 +1,47 @@
+.card {
+    display: inline-block;
+    width: 6em;
+    height: 9em;
+    border: 1px solid #666;
+    border-radius: 0.3em;
+    padding: 0.25em;
+    margin: 0 0.5em 0.5em 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0.2em 0.2em 0.5em #333;
+}
+
+.card.diams, .card.hearts {
+    color: #f00;
+}
+
+.card .rank, .card .suit {
+    display: block;
+    line-height: 1;
+    text-align: left;
+}
+
+.centerSuit {
+    font-size: 5em;
+    transform: translateY(-20%);
+}
+
+h2 {
+    clear: both;
+}
+
+ul.table {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+    clear: both;
+}
+
+ul.table li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+}

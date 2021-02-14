@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Distribution et tri
+{% endblock %}
+
+{% block stylesheets %}
+	<link href="{{ asset('css/cards.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+			position: sticky;
+			float: none;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<h2>Cartes tirées</h2>
+		<ul class="table">
+			{% for card in hand %}
+				<li>
+					<div class="card {{ card.suit }} inner">
+						<span class="rank">{{ card.value }}</span>
+						<span class="suit">&{{ card.suit }};</span>
+						<div class="centerSuit">&{{ card.suit }};</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+		<h2>Cartes triées</h2>
+		<ul class="table">
+			{% for card in sortBySuit %}
+				<li>
+					<div class="card {{ card.suit }} inner">
+						<span class="rank">{{ card.value }}</span>
+						<span class="suit">&{{ card.suit }};</span>
+						<div class="centerSuit">&{{ card.suit }};</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
